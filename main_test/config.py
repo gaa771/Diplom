@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from settings import BASE_URL_1, BASE_URL_2, BASE_URL_3, API_KEY
+from settings import API_KEY
 
 
 @pytest.fixture

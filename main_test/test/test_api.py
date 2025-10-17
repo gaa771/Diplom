@@ -1,6 +1,5 @@
 import requests
-import pytest
-from settings import BASE_URL_1, BASE_URL_2, BASE_URL_3, API_KEY
+from settings import BASE_URL_1, BASE_URL_2, BASE_URL_3
 from config import headers
 
 

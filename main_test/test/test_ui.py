@@ -1,15 +1,12 @@
+from page.PageUI import PageUI
 import pytest
 import sys
 from pathlib import Path
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 import allure
+from config import driver
 
 # Добавляем путь к main_test в sys.path
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from page.PageUI import PageUI
-from config import driver
 
 
 # Позитивный тест - поиск на кириллице
@@ -19,7 +16,7 @@ def test_find_cyrillic_positive_ui(driver):
     result_cyrillic = find.find_cyrillic_positive_ui()
     assert result_cyrillic == "Аватар"
 
-'''
+
 # Позитивный тест - поиск на латинице
 def test_find_latin_positive_ui(driver):
     find = PageUI(driver)
@@ -67,4 +64,3 @@ def test_find_max_date_negative_ui(driver):
     driver.implicitly_wait(30)
     result_max_date = find.find_max_date_negative_ui()
     assert len(result_max_date) > 0
-'''
